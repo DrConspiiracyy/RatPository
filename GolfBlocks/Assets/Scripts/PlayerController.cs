@@ -66,7 +66,8 @@ public class PlayerController : MonoBehaviour {
 		ballPos = playerStart.transform.GetChild (1).gameObject;		/// this seems super fragile, should probably fix this
 		camPos = playerStart.transform.GetChild (2).gameObject;
 
-		playerCam.transform.position = camPos.transform.position;
+		//playerCam.transform.position = camPos.transform.position;
+		camPos.transform.position = playerCam.transform.position;
 		playerCam.transform.rotation = camPos.transform.rotation;
 
 		b = Instantiate (ball, ballPos.transform.position, ballPos.transform.rotation) as GameObject;
